@@ -19,14 +19,14 @@ metadata {
 	// simulator metadata
 	simulator {
 		for (int i = 0; i <= 100; i += 10) {
-			status "${i} F": "temperature:$i"
+			status "${i} c": "temperature:$i"
 		}
 	}
 
 	// UI tile definitions
 	tiles {
 		valueTile("temperature", "device.temperature", width: 2, height: 2) {
-			state("temperature", label:'${currentValue}°', unit:"F",
+			state("temperature", label:'${currentValue}°', unit:"C",
 				backgroundColors:[
 					[value: 31, color: "#153591"],
 					[value: 44, color: "#1e9cbb"],
